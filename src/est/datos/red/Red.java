@@ -14,7 +14,7 @@ public class Red {
 	}
 	
 	/**
-	 * Este método agrega los computadores a la lista Beta correspondiente
+	 * Este mï¿½todo agrega los computadores a la lista Beta correspondiente
 	 * a los computadores apagados.
 	 * @param direccionIP
 	 */
@@ -41,7 +41,7 @@ public class Red {
 		
 		Computador cEliminado = listaBeta.eliminar(pcAEliminar);
 		if(cEliminado==null)
-			throw new Exception("No se encontró el computador");
+			throw new Exception("No se encontrï¿½ el computador");
 		
 		cEliminado.setEncendido(true);
 		
@@ -60,7 +60,7 @@ public class Red {
 		
 		Computador cEliminado = listaAlfa.eliminar(pcAEliminar);
 		if(cEliminado==null)
-			throw new Exception("No se encontró el computador");
+			throw new Exception("No se encontrï¿½ el computador");
 		
 		cEliminado.setEncendido(false);
 		cEliminado.setMaxMem(1000);
@@ -74,7 +74,7 @@ public class Red {
 		for(int x=0;x<numVeces;x++) {
 		
 			for(int t=0;t<listaAlfa.getSize();t++) {
-				Computador c = listaAlfa.get(t); // Se requirió la implementación de este método en la lista
+				Computador c = listaAlfa.get(t); // Se requiriï¿½ la implementaciï¿½n de este mï¿½todo en la lista
 				int memoriaUsadaM = (int) (Math.random() * 100);
 				c.setMaxMem(c.getMaxMem()-memoriaUsadaM);
 				if(c.getMaxMem()<=0) {
@@ -90,19 +90,19 @@ public class Red {
 		
 		/*
 		 * Se obtienen los nodos de cada lista y se van agregando.
-		 * Como debe representarse la concatenación, entonces deben sacarse
+		 * Como debe representarse la concatenaciï¿½n, entonces deben sacarse
 		 * primer los nodos de una lista, y luego los nodos de la otra lista. 
 		 */
 		
 		
 		for(int t=0;t<listaAlfa.getSize();t++) {
-			Computador c = listaAlfa.get(t); // Se requirió la implementación de este método en la lista
+			Computador c = listaAlfa.get(t); // Se requiriï¿½ la implementaciï¿½n de este mï¿½todo en la lista
 			
 			listaGamma.agregar(c);
 		}
 		
 		for(int t=0;t<listaBeta.getSize();t++) {
-			Computador c = listaBeta.get(t); // Se requirió la implementación de este método en la lista
+			Computador c = listaBeta.get(t); // Se requiriï¿½ la implementaciï¿½n de este mï¿½todo en la lista
 			
 			listaGamma.agregar(c);
 		}
